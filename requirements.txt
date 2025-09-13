@@ -1,0 +1,17 @@
+django >5.2,<5.3
+djangorestframework
+djangorestframework-simplejwt
+markdown
+django-filter
+drf-yasg[validation]
+Pillow
+python-decouple
+django-cors-headers
+
+psycopg
+psycopg-binary
+
+flake8
+black
+
+django-cleanup
