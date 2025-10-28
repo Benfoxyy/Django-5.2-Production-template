@@ -1,4 +1,5 @@
 from .base import *
+from decouple import config
 
 SECRET_KEY = (
     "django-insecure-8v88337#vy^_6hxdom1ex(9ke39c2idr_yqt&hd+on8&pz@wce"
@@ -17,12 +18,6 @@ DATABASES = {
         "HOST": config("DB_HOST"),
         "PORT": config("DB_PORT"),
     }
-}
-
-REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
-    ),
 }
 
 SECURE_BROWSER_XSS_FILTER = True
