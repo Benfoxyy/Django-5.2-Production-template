@@ -27,3 +27,17 @@ SECURE_HSTS_SECONDS = 86400
 SECURE_HSTS_PRELOAD = True
 SECURE_HSTS_INCLUDE_SUBDOMAINS = True
 SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+
+
+SWAGGER_SETTINGS = {
+    "USE_SESSION_AUTH": False,  # hide the Django login/logout in Swagger UI
+    "SECURITY_DEFINITIONS": {
+        "Bearer": {
+            "type": "apiKey",
+            "name": "Authorization",
+            "in": "header",
+            "description": 'JWT Authorization header using the Bearer scheme. '
+                           'Example: "Authorization: Bearer <your_token>"',
+        }
+    },
+}
